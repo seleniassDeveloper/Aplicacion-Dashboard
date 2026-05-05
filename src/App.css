@@ -126,7 +126,7 @@ a[role="button"],
 .home-main {
   width: min(1240px, calc(100% - 40px));
   margin: 0 auto;
-  padding: 32px 0 max(96px, env(safe-area-inset-bottom, 0px));
+  padding: 56px 0 max(96px, env(safe-area-inset-bottom, 0px));
   display: grid;
   gap: 40px;
   box-sizing: border-box;
@@ -135,7 +135,7 @@ a[role="button"],
 @media (max-width: 640px) {
   .home-main {
     width: calc(100% - 20px);
-    padding: 16px 0 max(72px, env(safe-area-inset-bottom, 16px));
+    padding: 24px 0 max(72px, env(safe-area-inset-bottom, 16px));
     gap: 28px;
   }
 }
