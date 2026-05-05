@@ -190,13 +190,13 @@
 }
 
 .hero-mini-card--top {
-  top: -18px;
-  right: -18px;
+  top: 18px;
+  right: 18px;
 }
 
 .hero-mini-card--bottom {
-  left: -20px;
-  bottom: 24px;
+  left: 18px;
+  bottom: 18px;
   animation-delay: 1s;
 }
 
