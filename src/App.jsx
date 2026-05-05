@@ -4,7 +4,7 @@ import { BrandProvider } from "./gadgets/brand/BrandProvider.jsx";
 import Home from "./pages/Home.jsx";
 import RouteFallback from "./components/RouteFallback.jsx";
 
-const DashboardShell = lazy(() => import("./dashboard/DashboardShell.jsx"));
+const DashboardShell = lazy(() => import("./dashboard/IntegratedDashboardApp.jsx"));
 
 export default function App() {
   return (

@@ -11,6 +11,13 @@ export default defineConfig({
   server: {
     host: true,
     port: 5173,
+    fs: {
+      // Permite importar código del dashboard real desde otra carpeta local.
+      allow: [
+        __dirname,
+        path.resolve(__dirname, "../Aplicacion Dashboard/dashboard-react/src"),
+      ],
+    },
   },
   build: {
     rollupOptions: {
@@ -30,10 +37,12 @@ export default defineConfig({
     chunkSizeWarningLimit: 700,
   },
   resolve: {
+    dedupe: ["react", "react-dom"],
     alias: {
-      // Integración local sin publicar: si el otro repo está en carpeta
-      // hermana, descomenta y ajusta el nombre de la carpeta:
-      // "@dashboard-app": path.resolve(__dirname, "../nombre-del-otro-repo/src"),
+      "@appdash": path.resolve(__dirname, "../Aplicacion Dashboard/dashboard-react/src"),
+      // Fuerza a usar UNA sola copia de React (la de este proyecto)
+      react: path.resolve(__dirname, "node_modules/react"),
+      "react-dom": path.resolve(__dirname, "node_modules/react-dom"),
     },
   },
 })

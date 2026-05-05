@@ -25,7 +25,7 @@
 
 /* RESET */
 
-* {
+body:not(.is-dashboard-app) * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -45,8 +45,8 @@ body {
 }
 
 html,
-body,
-#root {
+body:not(.is-dashboard-app),
+body:not(.is-dashboard-app) #root {
   height: 100%;
   width: 100%;
   font-family: var(--font-sans);
@@ -80,14 +80,14 @@ body,
 
 /* LINKS */
 
-a {
+body:not(.is-dashboard-app) a {
   text-decoration: none;
   color: inherit;
 }
 
 /* BUTTONS */
 
-button {
+body:not(.is-dashboard-app) button {
   font-family: inherit;
   cursor: pointer;
   touch-action: manipulation;
