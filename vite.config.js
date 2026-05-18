@@ -12,11 +12,7 @@ export default defineConfig({
     host: true,
     port: 5173,
     fs: {
-      // Permite importar código del dashboard real desde otra carpeta local.
-      allow: [
-        __dirname,
-        path.resolve(__dirname, "../Aplicacion Dashboard/dashboard-react/src"),
-      ],
+      allow: [__dirname],
     },
   },
   build: {
@@ -39,10 +35,9 @@ export default defineConfig({
   resolve: {
     dedupe: ["react", "react-dom"],
     alias: {
-      "@appdash": path.resolve(__dirname, "../Aplicacion Dashboard/dashboard-react/src"),
-      // Fuerza a usar UNA sola copia de React (la de este proyecto)
+      "@appdash": path.resolve(__dirname, "src/appdash"),
       react: path.resolve(__dirname, "node_modules/react"),
       "react-dom": path.resolve(__dirname, "node_modules/react-dom"),
     },
   },
-})
+});

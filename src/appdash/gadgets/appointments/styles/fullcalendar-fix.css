@@ -1,0 +1,7 @@
+/* ✅ Fix duplicación de textos (Mes Mes / Febrero...February...) */
+.fc .fc-button .fc-button-text::before,
+.fc .fc-button .fc-button-text::after,
+.fc .fc-toolbar-title::before,
+.fc .fc-toolbar-title::after {
+  content: "" !important;
+}

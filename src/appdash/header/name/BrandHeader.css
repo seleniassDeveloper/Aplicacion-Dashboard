@@ -1,0 +1,143 @@
+.brandHeader {
+  width: 100vw;
+}
+
+/* Imagen fija */
+.brandHeader__image {
+  height: 150px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Barra debajo de la imagen */
+.brandHeader__bar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+}
+
+.brandHeader__title {
+  margin: 0;
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Inter", "Segoe UI",
+    Roboto, Arial;
+}
+
+/* Botón editar */
+.brandHeader__btn {
+  background-color: transparent!important;
+  color: #111!important;
+  margin-left: auto;
+  border: 0;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.brandHeader__btn:hover {
+  border: #7f7f80 1px solid;
+  background-color: #eee!important;
+}
+
+/* Modo oscuro/claro solo para el header */
+.brandHeader--dark .brandHeader__bar {
+  background: #0f0f10;
+}
+.brandHeader--dark .brandHeader__btn {
+  background: #1f1f22;
+  color: #fff;
+}
+
+.brandHeader--light .brandHeader__bar {
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.brandHeader--light .brandHeader__btn {
+  background: #f1f5f9;
+  color: #0f172a;
+  border: 1px solid #e2e8f0;
+}
+
+.brandHeader--light .brandHeader__btn:hover {
+  background: #e2e8f0;
+}
+
+.brandHeader__btn--logout {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #fee2e2 !important; /* Rojo suave */
+  color: #991b1b !important;
+  border: 1px solid #fecaca !important;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.brandHeader__btn--logout:hover {
+  background: #fecaca !important;
+}
+
+.brandHeader--dark .brandHeader__btn--logout {
+  background: #7f1d1d !important;
+  color: #fee2e2 !important;
+  border: 1px solid #991b1b !important;
+}
+
+.brandHeader__actions{
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  position: relative;
+}
+
+.brandHeader__menu{
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  background: white;
+  border: 1px solid #eef2f7;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  padding: 8px;
+  min-width: 220px;
+  z-index: 50;
+}
+
+.brandHeader--dark .brandHeader__menu{
+  background: #111827;
+  border-color: rgba(255,255,255,0.08);
+}
+
+.brandHeader__menuItem{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 0;
+  background: transparent;
+  padding: 10px 10px;
+  border-radius: 10px;
+  font-size: 13px;
+  color: #111827;
+  cursor: pointer;
+  text-align: left;
+}
+
+.brandHeader--dark .brandHeader__menuItem{
+  color: #f9fafb;
+}
+
+.brandHeader__menuItem:hover{
+  background: #f3f4f6;
+}
+
+.brandHeader--dark .brandHeader__menuItem:hover{
+  background: rgba(255,255,255,0.06);
+}

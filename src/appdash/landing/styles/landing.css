@@ -1,0 +1,267 @@
+/* ==========================================
+   Premium Marketing Landing Page CSS
+   Coherent with Dashboard Design Line
+   ========================================== */
+
+:root {
+  --lp-bg: #fdfdfd;
+  --lp-accent: #e79235;
+  --lp-text: #0f172a;
+  --lp-text-muted: #64748b;
+  --lp-border: #f1f5f9;
+  --lp-card-bg: #ffffff;
+}
+
+.landing-premium {
+  background-color: var(--lp-bg);
+  color: var(--lp-text);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+.text-accent { color: var(--lp-accent) !important; }
+.bg-soft-grey { background-color: #f8fafc; }
+.py-120 { padding-top: 100px; padding-bottom: 100px; }
+
+/* Navbar */
+.logo-dot {
+  width: 12px;
+  height: 12px;
+  background-color: var(--lp-accent);
+  border-radius: 50%;
+}
+
+/* Hero Carousel Animation (Premium Cross-fade) */
+.hero-carousel {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #f1f5f9;
+}
+
+.hero-carousel__item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  transform: scale(1.05);
+  transition: opacity 1.2s ease-in-out, transform 1.2s ease-in-out;
+  z-index: 1;
+}
+
+.hero-carousel__item.active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 2;
+}
+
+.hero-product-shot {
+  position: relative;
+  min-height: 450px;
+  padding: 20px;
+}
+
+.shadow-extreme {
+  box-shadow: 0 50px 100px -20px rgba(0, 0, 0, 0.12), 0 30px 60px -30px rgba(0, 0, 0, 0.15) !important;
+}
+
+.floating-card {
+  position: absolute;
+  width: 140px;
+  padding: 20px;
+  z-index: 10;
+  animation: floatAnim 6s ease-in-out infinite;
+}
+
+.metrics-card {
+  top: 0;
+  right: 0;
+}
+
+.users-card {
+  bottom: 0;
+  left: 0;
+  animation-delay: -3s;
+}
+
+@keyframes floatAnim {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+/* Feature Cards */
+.feature-card-hover {
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  cursor: default;
+}
+
+.feature-card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.05) !important;
+  border-color: var(--lp-accent) !important;
+}
+
+/* Pricing */
+.border-accent {
+  border: 2px solid var(--lp-accent) !important;
+}
+
+.shadow-accent {
+  box-shadow: 0 20px 40px -10px rgba(231, 146, 53, 0.15) !important;
+}
+
+/* Scroll Reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Global Elements (from Dashboard) */
+.card-premium {
+  background: white;
+  border: 1px solid var(--lp-border);
+  border-radius: 20px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.01);
+}
+
+.btn-premium {
+  background: #111827;
+  color: white;
+  border-radius: 999px;
+  font-weight: 700;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.btn-premium:hover {
+  background: #1e293b;
+  transform: scale(1.02);
+  color: white;
+}
+
+/* Premium Manual Modal Styles */
+.premium-modal-wrapper .modal-content {
+  border-radius: 32px;
+  border: none;
+  overflow: hidden;
+}
+
+.premium-how-it-works {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  max-height: 90vh;
+}
+
+.modal-header-custom {
+  padding: 32px 40px;
+  border-bottom: 1px solid #f1f5f9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.btn-close-custom {
+  background: #f8fafc;
+  border: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  transition: all 0.2s ease;
+}
+
+.btn-close-custom:hover {
+  background: #f1f5f9;
+  color: #0f172a;
+  transform: rotate(90deg);
+}
+
+.modal-body-custom {
+  padding: 40px;
+  overflow-y: auto;
+}
+
+.scroll-custom::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scroll-custom::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+
+.scroll-custom::-webkit-scrollbar-thumb {
+  background: #e2e8f0;
+  border-radius: 10px;
+}
+
+.manual-step-item {
+  border-bottom: 1px solid #f8fafc;
+  padding-bottom: 40px;
+}
+
+.manual-step-item:last-child {
+  border-bottom: none;
+}
+
+.step-number {
+  width: 32px;
+  height: 32px;
+  background: var(--lp-accent);
+  color: white;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.modal-footer-custom {
+  padding: 32px 40px;
+  border-top: 1px solid #f1f5f9;
+  display: flex;
+  justify-content: center;
+  background: #ffffff;
+}
+
+.btn-outline-premium {
+  background: transparent;
+  color: #111827;
+  border-radius: 999px;
+  font-weight: 700;
+  border: 1px solid #e2e8f0;
+  padding: 12px 24px;
+  cursor: pointer;
+}
+
+.fw-black { font-weight: 900; }
+.uppercase { text-transform: uppercase; letter-spacing: 0.1em; font-size: 11px; }
+.smaller { font-size: 11px; }
+
+@media (max-width: 991px) {
+  .hero-product-shot {
+    margin-top: 60px;
+  }
+  .display-3 {
+    font-size: 3rem;
+  }
+}

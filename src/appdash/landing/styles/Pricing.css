@@ -1,0 +1,119 @@
+/* =========================
+   Hegemonic Pricing Cards
+   ========================= */
+
+.pricing {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 24px;
+}
+
+.pricing__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 60px;
+}
+
+.pricing__card {
+  background: white;
+  border-radius: 32px;
+  padding: 48px 32px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #f1f5f9;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.02);
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  position: relative;
+}
+
+.pricing__card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 40px 80px -15px rgba(231, 146, 53, 0.15);
+  border-color: rgba(231, 146, 53, 0.2);
+}
+
+.pricing__card--featured {
+  border: 2px solid #e79235;
+  background: #fffbf5;
+}
+
+.pricing__card--featured::before {
+  content: "RECOMENDADO";
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  background: #e79235;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.pricing__label {
+  font-size: 14px;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+}
+
+.pricing__price {
+  font-size: 56px;
+  font-weight: 900;
+  color: #1e293b;
+  letter-spacing: -0.04em;
+  margin-bottom: 32px;
+}
+
+.pricing__price::after {
+  content: " / mes";
+  font-size: 16px;
+  font-weight: 600;
+  color: #94a3b8;
+}
+
+.pricing__button {
+  width: 100%;
+  padding: 16px;
+  border-radius: 16px;
+  font-weight: 800;
+  font-size: 16px;
+  text-align: center;
+  transition: all 0.3s ease;
+  margin-top: auto;
+}
+
+.pricing__button:not(.pricing__button--featured) {
+  background: #f1f5f9;
+  color: #475569;
+}
+
+.pricing__button:not(.pricing__button--featured):hover {
+  background: #e2e8f0;
+}
+
+.pricing__button--featured {
+  background: #e79235;
+  color: white;
+  box-shadow: 0 10px 20px -5px rgba(231, 146, 53, 0.4);
+}
+
+.pricing__button--featured:hover {
+  background: #d97706;
+  transform: translateY(-2px);
+  box-shadow: 0 15px 25px -5px rgba(231, 146, 53, 0.5);
+}
+
+@media (max-width: 900px) {
+  .pricing__grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

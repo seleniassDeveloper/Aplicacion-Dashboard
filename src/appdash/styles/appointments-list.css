@@ -1,0 +1,179 @@
+/* =========================
+   Hegemonic Appointment Cards
+   Ultra-Compact & Premium
+   ========================= */
+
+.appointment-card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.05) !important;
+  border-radius: 10px !important;
+  padding: 8px 12px !important;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+}
+
+.appointment-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  border-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Status Badge Container */
+.appt-status-badge {
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0 4px;
+  transition: all 0.2s ease;
+}
+
+.appt-status-select-transparent {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  padding: 4px 8px !important;
+  cursor: pointer;
+  width: auto !important;
+  min-width: 110px !important;
+}
+
+/* Time Box */
+.appt-time-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 55px;
+  padding-right: 12px;
+  border-right: 1px solid #f1f5f9;
+}
+
+.appt-time {
+  font-size: 14px;
+  font-weight: 800;
+  color: #111827;
+  line-height: 1;
+}
+
+.appt-date {
+  font-size: 10px;
+  font-weight: 600;
+  color: #94a3b8;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+/* Main Info */
+.appt-main-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.appt-client-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1e293b;
+  letter-spacing: -0.01em;
+}
+
+.appt-details {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: #64748b;
+}
+
+.appt-divider {
+  opacity: 0.3;
+}
+
+.appt-service {
+  font-weight: 600;
+  color: #475569;
+}
+
+/* Status & Actions */
+.appt-status-select {
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  padding: 4px 8px !important;
+  border-radius: 8px !important;
+  width: auto !important;
+  min-width: 120px !important;
+  background-color: #f8fafc !important;
+  cursor: pointer;
+}
+
+.appt-actions .btn-link {
+  color: #94a3b8;
+  transition: all 0.2s ease;
+  border-radius: 6px;
+}
+
+.appt-actions .btn-link:hover {
+  background: #f1f5f9;
+}
+
+.appt-actions .hover-danger:hover {
+  color: #ef4444 !important;
+  background: #fef2f2 !important;
+}
+
+.appt-actions .hover-dark:hover {
+  color: #1e293b !important;
+  background: #f1f5f9 !important;
+}
+
+/* Pagination Custom */
+.pagination {
+  gap: 4px;
+}
+
+.page-link {
+  border: none !important;
+  border-radius: 8px !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  color: #64748b !important;
+  padding: 6px 12px !important;
+}
+
+.page-item.active .page-link {
+  background-color: #1e293b !important;
+  color: #ffffff !important;
+}
+
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+  .appointment-card > div {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+  
+  .appt-time-box {
+    flex-direction: row;
+    gap: 8px;
+    border-right: none;
+    padding-right: 0;
+    margin-bottom: 8px;
+    width: 100%;
+    justify-content: flex-start;
+  }
+  
+  .appt-status-select {
+    width: 100% !important;
+  }
+}
